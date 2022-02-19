@@ -129,7 +129,7 @@ dk.e1000=0
 
 Minh da disable disable card wifi goc tren mainboard va thay the bang BCM943602CS + adapter PCIE -> M2 SSD. Neu van muon su dung card wifi goc moi nguoi them kext AirportItlwm, IntelBluetoothFirmware va map lai USB port(HS14 la port bluetooth - usb type: 255) va disable ssdt SSDT-Disable-CNVW.aml
 
-
+### BIOS SETUP
 #### Disable
 
 * Fast Boot
@@ -150,7 +150,7 @@ Minh da disable disable card wifi goc tren mainboard va thay the bang BCM943602C
 
 ### Installation
 
-The [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) is quite clear and easy, so there will be no detailed installation tutorials here. Give it some patience and you can build your own EFI.
+Cac huong dan ban co the tim tai day[OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/).
 
 ## Credits
 
