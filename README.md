@@ -41,7 +41,7 @@
 - [x] Power Management (Native support)
 
 ## Không Hoạt động
-- [] DRM không hoạt động trên Bigsur/Monterey
+- [x] DRM không hoạt động trên Bigsur/Monterey
 
 ## Chi tiết
 
