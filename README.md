@@ -5,6 +5,7 @@
 ## Lưu ý:
 - Thư mục EFI dành cho phiên bản MacOS 11, 12 (Bigsur / Monterey). Đối với MacOS 12 Ethernet i225v không hoạt động.
 - Thư mục EFI-catalina dành cho phiên bản MacOS catalina. Tôi chưa kiểm tra nó có hoạt động với các phiên bản MacOS thấp hơn không.
+- **Hãy tạo lại SMBios để cập nhật lại các thông số: SystemUUID, SystemSerialNumber, MLB**
 
 ## Sự khác biệt giữa 2 thư mục EFI
 - Có 2 kext được thêm trong EFI-catalina: FakePCIID.kext, FakePCIID_Intel_I225-V.kext nếu không có khi boot sẽ bị kernel panic.
@@ -129,6 +130,182 @@ dk.e1000=0
 ### Wi-Fi/BT
 
 Tôi đã disable card wifi gốc có trên mainboard và thay thế nó bằng BCM943602CS + adapter PCIE -> M2 SSD. Nếu vẫn muốn sử dụng card wifi gốc các bạn hãy thêm kext AirportItlwm, IntelBluetoothFirmware và map lại USB port(HS14 là port bluetooth - usb type: 255) **hãy xoá hoặc disable ssdt SSDT-Disable-CNVW.aml trong ACPI**
+
+### USB
+
+Các bạn có thể sử dụng tool [USB tool](https://github.com/USBToolBox/tool) để map lại các cổng USB. Khuyến khích sử dụng tool trên windows.
+Lưu ý: Tôi đã loại bỏ usb hub 2.0 trên mainboard vì khi tôi sử dụng nó kết hợp với cable kết nối có sẵn của mainboard cho bluetooth(BCM943602CS + adapter) nó sẽ gặp vấn đề với chức năng sleep. 
+
+```xml
+    <key>ports</key>
+    <dict>
+        <key>HS01</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>3</integer>
+            <key>name</key>
+            <string>HS01</string>
+            <key>port</key>
+            <data>
+            AwAAAA==
+            </data>
+        </dict>
+        <key>HS02</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>3</integer>
+            <key>name</key>
+            <string>HS02</string>
+            <key>port</key>
+            <data>
+            BAAAAA==
+            </data>
+        </dict>
+        <key>HS03</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>3</integer>
+            <key>name</key>
+            <string>HS03</string>
+            <key>port</key>
+            <data>
+            BQAAAA==
+            </data>
+        </dict>
+        <key>HS04</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>10</integer>
+            <key>name</key>
+            <string>HS04</string>
+            <key>port</key>
+            <data>
+            BgAAAA==
+            </data>
+        </dict>
+        <key>HS05</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>3</integer>
+            <key>name</key>
+            <string>HS05</string>
+            <key>port</key>
+            <data>
+            BwAAAA==
+            </data>
+        </dict>
+        <key>HS06</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>3</integer>
+            <key>name</key>
+            <string>HS06</string>
+            <key>port</key>
+            <data>
+            CAAAAA==
+            </data>
+        </dict>
+        <key>HS07</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>255</integer>
+            <key>name</key>
+            <string>HS07</string>
+            <key>port</key>
+            <data>
+            CQAAAA==
+            </data>
+        </dict>
+        <key>HS08</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>0</integer>
+            <key>name</key>
+            <string>HS08</string>
+            <key>port</key>
+            <data>
+            CwAAAA==
+            </data>
+        </dict>
+        <key>HS09</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>0</integer>
+            <key>name</key>
+            <string>HS09</string>
+            <key>port</key>
+            <data>
+            DAAAAA==
+            </data>
+        </dict>
+        <key>HS10</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>255</integer>
+            <key>name</key>
+            <string>HS10</string>
+            <key>port</key>
+            <data>
+            DQAAAA==
+            </data>
+        </dict>
+        <key>SS01</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>3</integer>
+            <key>name</key>
+            <string>SS01</string>
+            <key>port</key>
+            <data>
+            EwAAAA==
+            </data>
+        </dict>
+        <key>SS02</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>3</integer>
+            <key>name</key>
+            <string>SS02</string>
+            <key>port</key>
+            <data>
+            FAAAAA==
+            </data>
+        </dict>
+        <key>SS03</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>3</integer>
+            <key>name</key>
+            <string>SS03</string>
+            <key>port</key>
+            <data>
+            FQAAAA==
+            </data>
+        </dict>
+        <key>SS04</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>3</integer>
+            <key>name</key>
+            <string>SS04</string>
+            <key>port</key>
+            <data>
+            FwAAAA==
+            </data>
+        </dict>
+        <key>SS05</key>
+        <dict>
+            <key>UsbConnector</key>
+            <integer>3</integer>
+            <key>name</key>
+            <string>SS05</string>
+            <key>port</key>
+            <data>
+            GAAAAA==
+            </data>
+        </dict>
+    </dict>
+```
 
 ### BIOS SETUP
 #### Disable
