@@ -27,7 +27,7 @@
 ## Phần mềm
 
 * Bootloader: OpenCore 0.7.8
-* OS: macOS Monterey 11.6.1 (iMac20,1)
+* OS: macOS Bigsur 11.6.1 (iMac20,1)
 
 ## Hoạt động
 
