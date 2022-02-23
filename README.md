@@ -324,7 +324,7 @@ Lưu ý: Tôi đã loại bỏ usb hub 2.0 trên mainboard vì khi tôi sử d�
 * EHCI/XHCI Hand-off
 * OS type: Other
 * DVMT Pre-Allocated(iGPU Memory): 64MB
-
+* Internal Graphics
 
 ### Installation
 
