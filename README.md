@@ -20,7 +20,7 @@
     * Wi-Fi/BT: Intel AX201NGW (onboard) - Disabled / BCM943602CS(M.2 Adapter)
     * Audio: Realtek ALCS1220A
 * CPU: Intel i5-10400
-* GPU: Intel UHD630 / ~~ AMD RX 460 ~~ => AMD MSI Rx 6600 Mech 2x
+* GPU: Intel UHD630 / ~~AMD RX 460~~ => AMD MSI Rx 6600 Mech 2x
 * RAM: CORSAIR DOMINATOR PLATINUM DDR4 3200 32GB(16G×2)
 * Display: DELL P2419H (PD) + LG QP500 (DP)
 
@@ -32,7 +32,7 @@
 ## Hoạt động
 
 - [x] Intel UHD630 (iGPU)
-- [x] AMD RX 460 (dGPU)
+- [x] AMD MSI RX 6600 Mech 2x (dGPU)
 - [x] Audio Realtek ALC1220
 - [x] Intel I225-V 2.5Gb Ethernet(Bug sur, Monterey không hoạt động)
 - [x] Wi-Fi/BT (BCM943602CS)
