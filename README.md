@@ -20,21 +20,21 @@
     * Wi-Fi/BT: Intel AX201NGW (onboard) - Disabled / BCM943602CS(M.2 Adapter)
     * Audio: Realtek ALCS1220A
 * CPU: Intel i5-10400
-* GPU: Intel UHD630 / AMD RX 460
+* GPU: Intel UHD630 / ~~ AMD RX 460 ~~ => AMD MSI Rx 6600 Mech 2x
 * RAM: CORSAIR DOMINATOR PLATINUM DDR4 3200 32GB(16G×2)
-* Display: DELL P2419H
+* Display: DELL P2419H (PD) + LG QP500 (DP)
 
 ## Phần mềm
 
-* Bootloader: OpenCore 0.7.8
-* OS: macOS Bigsur 11.6.1 (iMac20,1)
+* Bootloader: OpenCore 0.8.5
+* OS: macOS Bigsur 12.2.1 (iMac20,1)
 
 ## Hoạt động
 
 - [x] Intel UHD630 (iGPU)
 - [x] AMD RX 460 (dGPU)
 - [x] Audio Realtek ALC1220
-- [x] Intel I225-V 2.5Gb Ethernet
+- [x] Intel I225-V 2.5Gb Ethernet(Bug sur, Monterey không hoạt động)
 - [x] Wi-Fi/BT (BCM943602CS)
 - [x] USB
 - [x] Restart/Shutdown
